@@ -1,0 +1,35 @@
+header {
+    background-color: #153557;
+    color: rgb(139, 185, 185);
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+body {
+    background-color: #1d12b2c2;
+    margin: 0;
+}
+
+.panelButton {
+    padding-top: 100px;
+    height: 100vh;
+    background-color: #b7e8c0c2;
+    width: 300px;
+}
+
+a {
+    text-decoration: none;
+    color: #204029;
+}
+
+a:hover {
+    color: #932087;
+    background-color: #204029;
+}
+
+a:active {
+    background-color: #204029;
+    color: #932087;
+}
