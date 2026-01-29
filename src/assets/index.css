@@ -1,6 +1,6 @@
 header {
     background-color: #153557;
-    color: rgb(139, 185, 185);
+    color: #ffffff;
     text-align: center;
     position: fixed;
     width: 100%;
@@ -8,28 +8,49 @@ header {
 }
 
 body {
-    background-color: #1d12b2c2;
+    background-color: #cbcae3c2;
     margin: 0;
 }
 
 .panelButton {
-    padding-top: 100px;
-    height: 100vh;
-    background-color: #b7e8c0c2;
+    background-color: #ffffff;
     width: 300px;
+    color: #153557;
+    text-align: center;
 }
 
-a {
+.button {
     text-decoration: none;
-    color: #204029;
+    color: #153557;
+    display: block;
+    padding: 10px 0 10px 0;
+    width: 100%;
+    margin: 5px 0;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid #cbcae3c2;
+    background-color: #cbcae3c2;
 }
 
-a:hover {
-    color: #932087;
-    background-color: #204029;
+.button:hover {
+    color: #ffffff;
+    background-color: #153557;
 }
 
-a:active {
-    background-color: #204029;
-    color: #932087;
+.button:active {
+    background-color: #153557;
+    color: #ffffff;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.container {
+    display: flex;
+    padding-top: 120px;
+    height: 100vh
 }
