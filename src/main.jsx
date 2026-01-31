@@ -1,31 +1,34 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom'
 import './assets/index.css'
 
-import Home from './pages/Home'
-import MyModules from './pages/MyModules'
-import Profile from './pages/Profile'
-import Settings from './pages/Settings'
-import NotFound from './pages/NotFound'
+import Home from './pages/Home/Home'
+import MyModules from './pages/MyModules/MyModules'
+import Profile from './pages/Profile/Profile'
+import Settings from './pages/Settings/Settings'
+import NotFound from './pages/NotFound/NotFound'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <header>
-        <h1>WordFlip</h1>
-        <h3>Карточная игра для быстрого изучения слов</h3>
+        <img src="../logo.png" alt="logo" />
+        <div>
+          <h1>WordFlip</h1>
+          <h3>Карточная игра для быстрого изучения слов</h3>
+        </div>
       </header>
-      <div class="container">
-        <div class="panelButton">
+      <div className="container">
+        <div className="panelButton">
           <h3>Основные разделы</h3>
           <hr />
-          <Link to="/" class="button">Главная</Link>
-          <Link to="/MyModules" class="button">Мои модули</Link>
-          <Link to="/Profile" class="button">Профиль</Link>
-          <Link to="/Settings" class="button">Настройки</Link>
+          <NavLink to="/" className="button">Главная</NavLink>
+          <NavLink to="/MyModules" className="button">Мои модули</NavLink>
+          <NavLink to="/Profile" className="button">Профиль</NavLink>
+          <NavLink to="/Settings" className="button">Настройки</NavLink>
         </div>
-        <div class="main-content">
+        <div className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/MyModules" element={<MyModules />} />

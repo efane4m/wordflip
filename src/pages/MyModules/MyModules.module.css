@@ -1,0 +1,13 @@
+.plus {
+    border-radius: 50%;
+    background-color: #298d0e;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    border: 2px solid #000;
+}

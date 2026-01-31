@@ -5,6 +5,16 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 20px;
 }
 
 body {
@@ -24,21 +34,23 @@ body {
     color: #153557;
     display: block;
     padding: 10px 0 10px 0;
-    width: 100%;
-    margin: 5px 0;
+    width: 80%;
+    margin: 5px auto;
     cursor: pointer;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 1px solid #cbcae3c2;
     background-color: #cbcae3c2;
+    transition: transform 0.2s ease;
 }
 
 .button:hover {
     color: #ffffff;
     background-color: #153557;
+    transform: translateX(5px);
 }
 
-.button:active {
+.button.active {
     background-color: #153557;
     color: #ffffff;
 }
@@ -47,10 +59,13 @@ body {
     flex: 1;
     padding: 20px;
     overflow-y: auto;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 10px;
 }
 
 .container {
     display: flex;
     padding-top: 120px;
-    height: 100vh
+    height: 100vh;
 }
