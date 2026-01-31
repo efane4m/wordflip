@@ -1,4 +1,4 @@
-.plus {
+.plus button {
     border-radius: 50%;
     background-color: #298d0e;
     width: 40px;
@@ -9,5 +9,9 @@
     color: #fff;
     font-size: 24px;
     cursor: pointer;
-    border: 2px solid #000;
+    border: none;
+}
+
+.plus button:hover {
+    background-color: #1f6b0a;
 }

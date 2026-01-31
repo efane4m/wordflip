@@ -1,0 +1,24 @@
+.createModule form {
+    display: flex;
+    flex-direction: column;
+}
+
+.createModule input {
+    padding: 10px;
+    border: 1px solid #cbcae3c2;
+    border-radius: 5px;
+}
+
+.createModule button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #298d0e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.createModule button:hover {
+    background-color: #1f6b0a;
+}

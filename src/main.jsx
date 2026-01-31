@@ -8,6 +8,7 @@ import MyModules from './pages/MyModules/MyModules'
 import Profile from './pages/Profile/Profile'
 import Settings from './pages/Settings/Settings'
 import NotFound from './pages/NotFound/NotFound'
+import CreateModule from './pages/createModule/createModule'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -34,6 +35,7 @@ createRoot(document.getElementById('root')).render(
             <Route path="/MyModules" element={<MyModules />} />
             <Route path="/Profile" element={<Profile />} />
             <Route path="/Settings" element={<Settings />} />
+            <Route path="/CreateModule" element={<CreateModule />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
