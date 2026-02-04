@@ -1,3 +1,5 @@
+require('dotenv').config({ path: '../.env' })
+
 const express = require('express')
 const mysql = require('mysql')
 const cors = require('cors')
@@ -6,10 +8,10 @@ const app = express()
 app.use(cors())
 
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '1111',
-    database: 'wordflip'
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME
 })
 
 app.get('/', (req, res)=> {
@@ -40,6 +42,6 @@ app.get('/cards', (req, res)=> {
     })
 })
 
-app.listen(8081, ()=> {
+app.listen(process.env.PORT, ()=> {
     console.log("listening");
 })
