@@ -13,16 +13,13 @@ function MyModules() {
   }, [])
   return (
     <div className={styles.MyModules}>
-      <h1>Мои модули</h1>
-      <table>
-        <tbody>
-          {data.map((d, i) => (
-            <tr key={i}>
-              <td>{d.name}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <h1>Мои модули</h1>
+      {data.map((d, i) => (
+        <div className={styles.module} key={i}>
+          <h3>{d.name}</h3>
+          <p onClick={() => navigate(`/MyModules/${d.id}`)}>Перейти к изучению модуля</p>
+        </div>
+      ))}
       <div className={styles.plus} onClick={() => navigate('/CreateModule')}>
         <button>+</button>
       </div>
