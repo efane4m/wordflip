@@ -1,0 +1,44 @@
+.wordForm {
+    background-color: #cbcae3c2;
+    border: 2px solid #132302;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wordForm legend {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.wordForm label {
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #132302;
+}
+
+.wordForm input {
+    width: 100%;
+    border: 1px solid #132302;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 8px;
+    margin-top: 4px;
+    font-size: 16px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #298d0e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1f6b0a;
+}
