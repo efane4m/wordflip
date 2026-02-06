@@ -1,0 +1,18 @@
+.header {
+    background-color: #153557;
+    color: #ffffff;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 20px;
+}

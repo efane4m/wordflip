@@ -11,17 +11,19 @@ import NotFound from './pages/NotFound/NotFound'
 import CreateModule from './pages/createModule/createModule'
 import Module from './pages/Module/Module'
 import LearnPage from './pages/learnPage/learnPage'
+import Header from './components/Header/Header'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <header>
+      <Header />
+        {/*<header>
         <img src="../logo.png" alt="logo" />
         <div>
           <h1>WordFlip</h1>
           <h3>Карточная игра для быстрого изучения слов</h3>
         </div>
-      </header>
+      </header>*/}
       <div className="container">
         <div className="panelButton">
           <h3>Основные разделы</h3>
