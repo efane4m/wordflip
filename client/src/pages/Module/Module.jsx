@@ -28,7 +28,7 @@ function Module() {
           </form>
         ))
       }
-      <button type="button" onClick={() => navigate(`/MyModules/${id}/learning`)}>Перейти к изучению модуля</button>
+      <button className="button" type="button" onClick={() => navigate(`/MyModules/${id}/learning`)}>Перейти к изучению модуля</button>
     </div>
   );
 }

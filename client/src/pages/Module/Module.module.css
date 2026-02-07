@@ -29,7 +29,7 @@
     font-size: 16px;
 }
 
-button {
+.button {
     margin-top: 10px;
     padding: 10px;
     background-color: #298d0e;
@@ -39,6 +39,6 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.button:hover {
     background-color: #1f6b0a;
 }
