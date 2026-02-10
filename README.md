@@ -1,16 +1,61 @@
-# React + Vite
+# WordFlip
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**WordFlip** - это интерактивное приложение для изучения слов с помощью карточек (flashcards). Создавайте модули, добавляйте слова на двух языках и учите их. Приложение адаптируется под ваш прогресс и предлагает повторять только те слова, которые вы еще не освоили.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Основные возможности
+- **Создание модулей** — тематические наборы для изучения
+- **Добавление карточек** — слово + перевод на двух языках
+- **Интерактивное обучение** — выучил - нажал на кнопку выучил. Не выучил - нажал на кнопку невыучил
+- **Повторение сложных слов** — автоматический подбор слов, требующих повторения
+- **Отслеживание прогресса** — полное освоение модуля только после запоминания всех слов
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Структура проекта
+```
+├───client
+│   ├───public
+│   │   └───logo.png            # Логотип приложения
+│   ├───src
+│   │   ├───assets
+│   │   ├───components
+│   │   │   └───Header
+│   │   ├───pages               # Страницы приложения 
+│   │   │   ├───CreateModule    # Создание модуля
+│   │   │   ├───Home            # Главная страница
+│   │   │   ├───learnPage       # Изучение модуля
+│   │   │   ├───Module          # Карточки модуля
+│   │   │   ├───MyModules       # Мои модули
+│   │   │   ├───NotFound        # Ошибка 404
+│   │   │   ├───Profile         # Профиль
+│   │   │   └───Settings        # Настройки приложения
+│   │   ├───router              # Настройки роутера 
+│   │   └───main.jsx            # Точка входа
+│   ├───eslint.config.js
+│   ├───index.html
+│   ├───package-lock.json
+│   ├───package.json
+│   └───vite.config.js
+├───server                      # Папка с сервером
+│   ├───package-lock.json
+│   ├───package.json
+│   ├───server.js               # Сервер
+├───.env
+├───.gitignore
+└───README.md
+```
+---
+## Технологический стек
+- HTML
+- CSS
+- JavaScript
+- React
+- Express.js
+- MySQL
+---
+## Запуск приложения
+...
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
