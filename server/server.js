@@ -67,3 +67,43 @@ app.get('/cards/:id', (req, res) => {
 app.listen(process.env.PORT, ()=> {
     console.log("listening");
 })
+
+app.post('/cards', (req, res) => {
+    const { module_id, word_original, word_translation } = req.body;
+    if (!module_id || !word_original || !word_translation) {
+        return res.status(400).json({ error: "module_id, word_original и word_translation обязательны" });
+    }
+    const sql = "INSERT INTO cards (module_id, word_original, word_translation) VALUES (?, ?, ?)";
+    db.query(sql, [module_id, word_original, word_translation], (err, data) => {
+        if (err) return res.json(err);
+        return res.json({ message: "Карта создана", id: data.insertId });
+    });
+});
+
+app.put('/cards/:id', (req, res) => {
+    const id = req.params.id;
+    const { word_original, word_translation } = req.body;
+    if (!word_original || !word_translation) {
+        return res.status(400).json({ error: "word_original и word_translation обязательны" });
+    }
+    const sql = "UPDATE cards SET word_original = ?, word_translation = ? WHERE id = ?";
+    db.query(sql, [word_original, word_translation, id], (err, data) => {
+        if (err) return res.json(err);
+        if (data.affectedRows === 0) {
+            return res.status(404).json({ error: "Карта не найдена" });
+        }
+        return res.json({ message: "Card updated" });
+    });
+});
+
+app.delete('/cards/:id', (req, res) => {
+    const id = req.params.id
+    const sql = "DELETE FROM cards WHERE id = ?"
+    db.query(sql, [id], (err, data) => {
+        if (err) return res.json(err)
+        if (data.affectedRows === 0) {
+            return res.status(404).json({ error: "Карта не найдена" })
+        }
+        return res.json({ message: "Карта удалена" })
+    })
+})
